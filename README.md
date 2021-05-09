@@ -13,7 +13,7 @@ Database: `Firebase`
 
 ### Quick Start
 
-Clone the Repo: `https://github.com/theWellHopeErr/angular-art-store.git`
+Clone the Repo: `git clone https://github.com/theWellHopeErr/angular-art-store.git`
 
 Change Directory: `cd angular-art-store`
 
