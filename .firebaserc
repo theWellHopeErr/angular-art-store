@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angular-art-store": {
+      "hosting": {
+        "angular-art-store": [
+          "angular-art-store"
+        ]
+      }
+    }
+  }
+}

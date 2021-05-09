@@ -1,0 +1,31 @@
+<div class="dialog">
+  <h2 mat-dialog-title>Add New Art</h2>
+  <mat-form-field appearance="outline">
+    <mat-label>Name</mat-label>
+    <input matInput cdkFocusInitial [(ngModel)]="data.art.name" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Artist</mat-label>
+    <input matInput cdkFocusInitial [(ngModel)]="data.art.artist" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Image URL</mat-label>
+    <input matInput cdkFocusInitial [(ngModel)]="data.art.url" />
+  </mat-form-field>
+
+  <div mat-dialog-actions>
+    <button mat-button [mat-dialog-close]="{ art: data.art }">Add</button>
+    <button mat-button (click)="cancel()">Cancel</button>
+    <button
+      *ngIf="data.enableDelete"
+      mat-fab
+      color="primary"
+      aria-label="Delete"
+      [mat-dialog-close]="{ art: data.art, delete: true }"
+    >
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+</div>

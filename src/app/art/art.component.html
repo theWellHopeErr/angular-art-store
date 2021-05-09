@@ -1,0 +1,7 @@
+<mat-card class="item" (dblclick)="edit.emit(art)">
+  <div class="art-details">
+    <h2>{{ art.name }}</h2>
+    <h3>{{ art.artist }}</h3>
+  </div>
+  <img [src]="art.url" [alt]="art.name" width="50%" />
+</mat-card>
