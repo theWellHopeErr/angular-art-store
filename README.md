@@ -6,6 +6,7 @@ Bidding Process and finally be sold. It is hosted at [https://angular-art-store.
 ## Tech Stack Used
 
 Frontend: `Angular`
+
 Database: `Firebase`
 
 ## Documentation
