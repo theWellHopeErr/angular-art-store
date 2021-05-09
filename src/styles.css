@@ -8,7 +8,7 @@ body {
 }
 body {
   margin: 0;
-  font-family: "Balsamiq Sans", cursive;
+  font-family: "Balsamiq Sans", cursive !important;
 }
 body::-webkit-scrollbar {
   width: 0.5em;

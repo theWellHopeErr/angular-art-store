@@ -10,18 +10,27 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+// import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ArtComponent } from './art/art.component';
 import { ArtDialogComponent } from './art-dialog/art-dialog.component';
-import { environment } from 'src/environments/environment';
-import { FormsModule } from '@angular/forms';
 import { AuthComponent } from './auth/auth.component';
 import { HomeComponent } from './home/home.component';
+import { environment } from 'src/environments/environment';
+import { BackendProvider } from './_helpers/backend';
 
 @NgModule({
-  declarations: [AppComponent, ArtComponent, ArtDialogComponent, AuthComponent, HomeComponent],
+  declarations: [
+    AppComponent,
+    ArtComponent,
+    ArtDialogComponent,
+    AuthComponent,
+    HomeComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -34,10 +43,12 @@ import { HomeComponent } from './home/home.component';
     MatDialogModule,
     MatInputModule,
     FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
   ],
-  providers: [],
+  providers: [BackendProvider],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

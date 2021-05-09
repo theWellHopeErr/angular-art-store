@@ -1,0 +1,84 @@
+<mat-toolbar color="primary">
+  <mat-icon>local_fire_department</mat-icon>
+  <span>Art Store</span>
+  <button mat-button (click)="logout()">
+    <mat-icon>logout</mat-icon>
+    Log Out
+  </button>
+</mat-toolbar>
+
+<div class="content-wrapper">
+  <button mat-button (click)="newArt()">
+    <mat-icon>add</mat-icon>
+    Add Task
+  </button>
+
+  <div class="container-wrapper">
+    <div class="container">
+      <h2>In Stock</h2>
+      <mat-card
+        cdkDropList
+        id="inStock"
+        #inStockList="cdkDropList"
+        [cdkDropListData]="inStock | async"
+        (cdkDropListDropped)="drop($event)"
+        [cdkDropListConnectedTo]="[inBiddingList, soldList]"
+      >
+        <p class="empty-label" *ngIf="(inStock | async)?.length === 0">
+          Empty List
+        </p>
+        <app-art
+          cdkDrag
+          *ngFor="let art of inStock | async"
+          [art]="art"
+          (edit)="edit('inStock', $event)"
+        >
+        </app-art>
+      </mat-card>
+    </div>
+    <div class="container">
+      <h2>In Bidding</h2>
+      <mat-card
+        cdkDropList
+        id="inBidding"
+        #inBiddingList="cdkDropList"
+        [cdkDropListData]="inBidding | async"
+        (cdkDropListDropped)="drop($event)"
+        [cdkDropListConnectedTo]="[inStockList, soldList]"
+      >
+        <p class="empty-label" *ngIf="(inBidding | async)?.length === 0">
+          Empty List
+        </p>
+        <app-art
+          cdkDrag
+          *ngFor="let art of inBidding | async"
+          [art]="art"
+          (edit)="edit('inBidding', $event)"
+        >
+        </app-art>
+      </mat-card>
+    </div>
+    <div class="container">
+      <h2>Sold</h2>
+      <mat-card
+        cdkDropList
+        id="sold"
+        #soldList="cdkDropList"
+        [cdkDropListData]="sold | async"
+        (cdkDropListDropped)="drop($event)"
+        [cdkDropListConnectedTo]="[inStockList, inBiddingList]"
+      >
+        <p class="empty-label" *ngIf="(sold | async)?.length === 0">
+          Empty List
+        </p>
+        <app-art
+          cdkDrag
+          *ngFor="let art of sold | async"
+          [art]="art"
+          (edit)="edit('sold', $event)"
+        >
+        </app-art>
+      </mat-card>
+    </div>
+  </div>
+</div>

@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  apiUrl: '',
   firebase: {
     apiKey: 'AIzaSyCFbaj3JyNbpRSCGWOa_6RfA9S5H4sVd8Y',
     authDomain: 'angular-art-store.firebaseapp.com',

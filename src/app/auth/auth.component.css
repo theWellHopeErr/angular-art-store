@@ -1,0 +1,31 @@
+html {
+  background-color: #fff;
+  /* background-image: url("https://wallpaperaccess.com/full/1861279.jpg");
+  background-position: center center;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: cover; */
+  /* filter: blur(8px);
+    -webkit-filter: blur(8px); */
+}
+.auth {
+  color: #000;
+}
+
+.card {
+  border-radius: 1em;
+}
+
+.card-header {
+  text-align: center;
+  font-family: "Reggae One", cursive;
+  font-weight: bold;
+  font-size: 5em;
+  height: 1.4em;
+  padding: 0.4em;
+}
+
+.login-btn {
+  margin: auto;
+  display: block;
+}
