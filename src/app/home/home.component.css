@@ -1,3 +1,13 @@
+h1 {
+  font-family: "Reggae One", cursive;
+  font-size: 2em;
+}
+
+mat-icon {
+  font-size: 2em;
+  margin-right: auto;
+}
+
 mat-toolbar {
   margin-bottom: 20px;
 }
@@ -48,4 +58,8 @@ app-new-task {
 
 .cdk-drag-placeholder {
   opacity: 0;
+}
+
+.logout {
+  margin-left: auto;
 }
