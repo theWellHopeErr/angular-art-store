@@ -1,27 +1,25 @@
-# AngularArtStore
+# Art Store
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.8.
+This webapp is an Art Store where new arts can be added to stock then moved to the
+Bidding Process and finally be sold. It is hosted at [https://angular-art-store.web.app/](https://angular-art-store.web.app/login)
 
-## Development server
+## Tech Stack Used
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Frontend: `Angular`
+Database: `Firebase`
 
-## Code scaffolding
+## Documentation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Quick Start
 
-## Build
+Clone the Repo: `https://github.com/theWellHopeErr/angular-art-store.git`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Change Directory: `cd angular-art-store`
 
-## Running unit tests
+### Install Dependencies
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Using NPM: `npm install`
 
-## Running end-to-end tests
+### Run App
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Run App: `ng serve -o`
